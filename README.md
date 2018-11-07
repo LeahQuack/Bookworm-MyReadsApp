@@ -21,6 +21,7 @@ Nope -- Everything is included
 ## Resources
 * [Starter code](https://github.com/udacity/reactnd-project-myreads-starter)
 * [This walk-thru by Ryan Waite](https://www.youtube.com/watch?v=acJHkd6K5kI&=&feature=youtu.be)
+* [This walk-thru by Forrest Walker](https://www.youtube.com/watch?v=bpKI3R0nf7E)
 * [The React Training website](https://reacttraining.com/)
 * [The Road to React](https://roadtoreact.com/)
 * [BooksAPI.js](https://github.com/beckybair/myreads/blob/master/src/BooksAPI.js)
