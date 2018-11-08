@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import * as BooksAPI from '../BooksAPI';
 
 //Reference: https://www.robinwieruch.de/react-pass-props-to-component/#react-props
 class Book extends React.Component {
