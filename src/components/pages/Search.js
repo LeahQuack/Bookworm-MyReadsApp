@@ -16,6 +16,13 @@ class Search extends React.Component {
     }
   }
 
+  componentDidMount() {
+    BooksAPI.getAll()
+    .then(resp => {
+      this.setState({books: resp});
+    });
+  }
+
   updateQuery = (query) => {
     this.setState({query: query}, this.submitQuery);
   }
@@ -29,10 +36,14 @@ class Search extends React.Component {
         return this.setState({ results: [] });
       }
       else {
-        return this.setState({ results: res });
-      }
-    });
+        res.forEach(b => {
+          let i = this.state.books.filter(B => B.id === b.id);
+          b.shelf = i[0] ? i[0].shelf : null;
+        });
+    return this.setState({ results: res });
   }
+});
+}
 
   changeShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
@@ -62,7 +73,8 @@ class Search extends React.Component {
             this.state.results.map((book, key) =>
             <Book changeShelf={this.changeShelf}
             book={book}
-            key={key} />)
+            key={key.toString()}
+                  value={key}/>)
           }
           </ol>
         </div>
