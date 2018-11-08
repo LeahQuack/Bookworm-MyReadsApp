@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Book from './Book';
 
 function Shelf(props) {
@@ -12,7 +11,8 @@ function Shelf(props) {
               {books.map((book, key) =>
                 <Book
                   book={book}
-                  key={key}
+                  key={key.toString()}
+                        value={key}
                   changeShelf={props.changeShelf}
                 />)
               }
