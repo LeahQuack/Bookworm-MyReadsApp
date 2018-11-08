@@ -6,11 +6,8 @@ import Shelf from '../Shelf';
 
 //Reference: https://www.robinwieruch.de/react-pass-props-to-component/#react-props
 class BooksMain extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: []
-    }
+  state = {
+  books: []
   }
 
   componentDidMount() {
